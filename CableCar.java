@@ -3,10 +3,12 @@ class CableCar implements TrainStop {
     private Group group;            // group occupying the car
     private boolean inValley;       // flag indicating if in valley
     private boolean isDeparting;    // flag indicating if departing
+    private boolean isReturning;    // whether a group is returning
 
     CableCar() {
         inValley = true;
         isDeparting = true;
+        isReturning = false;
     }
 
     public boolean isOccupied() {
@@ -25,6 +27,7 @@ class CableCar implements TrainStop {
             " enters the cable car to go down");
         this.group = group;
         isDeparting = true;
+        isReturning = true;
         notifyAll();
     }
 
@@ -77,13 +80,14 @@ class CableCar implements TrainStop {
 
     // function for the consumer - group leaves from valley
     public synchronized void depart() {
-        while (!isOccupied() || !inValley) {
+        while (!isOccupied() || !inValley || !isReturning) {
             try { wait(); }
             catch (InterruptedException e) { }
         }
         System.out.println(group.toString() + " departs");
         this.group = null;
         isDeparting = false;
+        isReturning = false;
         notifyAll();
     }
 }
