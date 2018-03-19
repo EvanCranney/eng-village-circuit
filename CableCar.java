@@ -36,9 +36,11 @@ class CableCar implements TrainStop {
             catch (InterruptedException e) { }
         }
         System.out.println(group.toString() + " leaves the cable car");
+        Group tmp = this.group;
+        this.group = null;
         notifyAll();
         isDeparting = false;
-        return this.group;
+        return tmp;
     }
 
     // travel between the valley and terminus
