@@ -1,0 +1,1453 @@
+group [1] enters cable car to go up
+group [1] leaves the cable car
+group [1] enters village 0
+group [1] leaves village 0
+group [1] enters village 1
+group [1] leaves village 1
+group [2] enters cable car to go up
+group [2] leaves the cable car
+group [1] enters village 2
+group [1] leaves village 2
+group [2] enters village 0
+group [2] leaves village 0
+group [1] enters village 3
+group [1] leaves village 3
+group [2] enters village 1
+group [2] leaves village 1
+group [3] enters cable car to go up
+cable car ascends
+group [1] enters village 4
+group [1] leaves village 4
+group [2] enters village 2
+group [2] leaves village 2
+group [1] enters village 5
+group [1] leaves village 5
+group [2] enters village 3
+group [2] leaves village 3
+group [2] enters village 4
+group [2] leaves village 4
+cable car descends
+group [2] enters village 5
+group [3] leaves the cable car
+group [1] enters the cable car to go down
+group [1] departs
+group [4] enters cable car to go up
+group [3] enters village 0
+group [2] leaves village 5
+group [3] leaves village 0
+group [3] enters village 1
+group [4] leaves the cable car
+group [3] leaves village 1
+group [2] enters the cable car to go down
+group [2] departs
+group [4] enters village 0
+group [3] enters village 2
+group [4] leaves village 0
+group [3] leaves village 2
+group [5] enters cable car to go up
+cable car ascends
+group [4] enters village 1
+group [3] enters village 3
+group [4] leaves village 1
+group [3] leaves village 3
+group [4] enters village 2
+cable car descends
+group [3] enters village 4
+group [4] leaves village 2
+group [3] leaves village 4
+group [5] leaves the cable car
+group [4] enters village 3
+group [3] enters village 5
+group [4] leaves village 3
+group [3] leaves village 5
+group [5] enters village 0
+group [5] leaves village 0
+group [3] enters the cable car to go down
+group [4] enters village 4
+group [3] departs
+group [4] leaves village 4
+group [6] enters cable car to go up
+cable car ascends
+group [5] enters village 1
+group [5] leaves village 1
+group [4] enters village 5
+group [4] leaves village 5
+group [5] enters village 2
+group [5] leaves village 2
+group [5] enters village 3
+group [5] leaves village 3
+group [5] enters village 4
+group [5] leaves village 4
+cable car descends
+group [6] leaves the cable car
+group [4] enters the cable car to go down
+group [4] departs
+group [7] enters cable car to go up
+group [5] enters village 5
+group [5] leaves village 5
+group [6] enters village 0
+group [6] leaves village 0
+cable car ascends
+group [6] enters village 1
+group [6] leaves village 1
+group [6] enters village 2
+group [6] leaves village 2
+group [6] enters village 3
+group [6] leaves village 3
+group [6] enters village 4
+group [6] leaves village 4
+cable car descends
+group [6] enters village 5
+group [7] leaves the cable car
+group [5] enters the cable car to go down
+group [5] departs
+group [8] enters cable car to go up
+group [6] leaves village 5
+group [7] enters village 0
+group [7] leaves village 0
+group [8] leaves the cable car
+group [7] enters village 1
+group [6] enters the cable car to go down
+group [7] leaves village 1
+group [6] departs
+group [8] enters village 0
+group [7] enters village 2
+group [8] leaves village 0
+group [7] leaves village 2
+group [9] enters cable car to go up
+cable car ascends
+group [7] enters village 3
+group [8] enters village 1
+group [7] leaves village 3
+group [8] leaves village 1
+group [7] enters village 4
+group [8] enters village 2
+group [7] leaves village 4
+group [8] leaves village 2
+group [7] enters village 5
+group [8] enters village 3
+group [7] leaves village 5
+group [8] leaves village 3
+group [8] enters village 4
+group [8] leaves village 4
+cable car descends
+group [8] enters village 5
+group [9] leaves the cable car
+group [10] enters cable car to go up
+group [9] enters village 0
+group [9] leaves village 0
+cable car ascends
+group [9] enters village 1
+group [9] leaves village 1
+cable car descends
+group [9] enters village 2
+group [9] leaves village 2
+group [10] leaves the cable car
+group [7] enters the cable car to go down
+group [7] departs
+group [11] enters cable car to go up
+group [9] enters village 3
+group [9] leaves village 3
+group [8] leaves village 5
+group [10] enters village 0
+group [10] leaves village 0
+group [9] enters village 4
+group [9] leaves village 4
+group [11] leaves the cable car
+group [10] enters village 1
+group [8] enters the cable car to go down
+group [10] leaves village 1
+group [8] departs
+group [12] enters cable car to go up
+group [9] enters village 5
+group [11] enters village 0
+group [11] leaves village 0
+group [9] leaves village 5
+group [10] enters village 2
+group [10] leaves village 2
+cable car ascends
+group [10] enters village 3
+group [11] enters village 1
+group [10] leaves village 3
+group [11] leaves village 1
+group [11] enters village 2
+group [10] enters village 4
+group [11] leaves village 2
+group [10] leaves village 4
+group [10] enters village 5
+group [11] enters village 3
+group [11] leaves village 3
+group [11] enters village 4
+group [11] leaves village 4
+cable car descends
+group [12] leaves the cable car
+group [9] enters the cable car to go down
+group [9] departs
+group [13] enters cable car to go up
+group [10] leaves village 5
+group [12] enters village 0
+group [11] enters village 5
+group [12] leaves village 0
+group [13] leaves the cable car
+group [10] enters the cable car to go down
+group [12] enters village 1
+group [10] departs
+group [12] leaves village 1
+group [13] enters village 0
+group [12] enters village 2
+group [11] leaves village 5
+group [12] leaves village 2
+group [13] leaves village 0
+group [14] enters cable car to go up
+cable car ascends
+group [12] enters village 3
+group [13] enters village 1
+group [12] leaves village 3
+group [13] leaves village 1
+group [12] enters village 4
+group [13] enters village 2
+group [12] leaves village 4
+group [13] leaves village 2
+group [12] enters village 5
+group [13] enters village 3
+group [13] leaves village 3
+group [13] enters village 4
+group [13] leaves village 4
+cable car descends
+group [14] leaves the cable car
+group [11] enters the cable car to go down
+group [11] departs
+group [15] enters cable car to go up
+group [14] enters village 0
+group [12] leaves village 5
+group [14] leaves village 0
+group [13] enters village 5
+group [15] leaves the cable car
+group [14] enters village 1
+group [12] enters the cable car to go down
+group [14] leaves village 1
+group [12] departs
+group [16] enters cable car to go up
+group [15] enters village 0
+group [13] leaves village 5
+group [14] enters village 2
+group [15] leaves village 0
+group [14] leaves village 2
+cable car ascends
+group [14] enters village 3
+group [15] enters village 1
+group [14] leaves village 3
+group [15] leaves village 1
+group [15] enters village 2
+group [14] enters village 4
+group [15] leaves village 2
+group [14] leaves village 4
+group [15] enters village 3
+group [14] enters village 5
+group [15] leaves village 3
+group [15] enters village 4
+group [15] leaves village 4
+cable car descends
+group [16] leaves the cable car
+group [13] enters the cable car to go down
+group [13] departs
+group [17] enters cable car to go up
+group [16] enters village 0
+group [16] leaves village 0
+group [14] leaves village 5
+group [15] enters village 5
+group [17] leaves the cable car
+group [16] enters village 1
+group [14] enters the cable car to go down
+group [16] leaves village 1
+group [14] departs
+group [18] enters cable car to go up
+cable car ascends
+group [17] enters village 0
+group [16] enters village 2
+group [15] leaves village 5
+group [16] leaves village 2
+group [17] leaves village 0
+group [16] enters village 3
+group [17] enters village 1
+group [16] leaves village 3
+group [17] leaves village 1
+cable car descends
+group [16] enters village 4
+group [17] enters village 2
+group [16] leaves village 4
+group [17] leaves village 2
+group [18] leaves the cable car
+group [15] enters the cable car to go down
+group [15] departs
+group [19] enters cable car to go up
+group [17] enters village 3
+group [16] enters village 5
+group [17] leaves village 3
+group [18] enters village 0
+group [16] leaves village 5
+group [18] leaves village 0
+group [17] enters village 4
+group [17] leaves village 4
+group [19] leaves the cable car
+group [18] enters village 1
+group [16] enters the cable car to go down
+group [18] leaves village 1
+group [16] departs
+group [17] enters village 5
+group [19] enters village 0
+group [18] enters village 2
+group [17] leaves village 5
+group [18] leaves village 2
+group [19] leaves village 0
+group [20] enters cable car to go up
+cable car ascends
+group [18] enters village 3
+group [19] enters village 1
+group [18] leaves village 3
+group [19] leaves village 1
+group [19] enters village 2
+group [18] enters village 4
+group [19] leaves village 2
+group [18] leaves village 4
+group [19] enters village 3
+group [18] enters village 5
+group [19] leaves village 3
+group [19] enters village 4
+group [19] leaves village 4
+cable car descends
+group [20] leaves the cable car
+group [17] enters the cable car to go down
+group [17] departs
+group [21] enters cable car to go up
+group [20] enters village 0
+group [20] leaves village 0
+group [18] leaves village 5
+group [19] enters village 5
+cable car ascends
+group [20] enters village 1
+group [20] leaves village 1
+group [20] enters village 2
+group [20] leaves village 2
+cable car descends
+group [21] leaves the cable car
+group [18] enters the cable car to go down
+group [18] departs
+group [22] enters cable car to go up
+group [20] enters village 3
+group [20] leaves village 3
+group [21] enters village 0
+group [19] leaves village 5
+group [21] leaves village 0
+group [20] enters village 4
+group [20] leaves village 4
+group [22] leaves the cable car
+group [19] enters the cable car to go down
+group [21] enters village 1
+group [19] departs
+group [21] leaves village 1
+group [20] enters village 5
+group [23] enters cable car to go up
+group [22] enters village 0
+group [22] leaves village 0
+group [20] leaves village 5
+group [21] enters village 2
+group [21] leaves village 2
+group [23] leaves the cable car
+group [20] enters the cable car to go down
+group [21] enters village 3
+group [22] enters village 1
+group [21] leaves village 3
+group [20] departs
+group [22] leaves village 1
+group [23] enters village 0
+group [23] leaves village 0
+group [22] enters village 2
+group [21] enters village 4
+group [22] leaves village 2
+group [21] leaves village 4
+group [22] enters village 3
+group [23] enters village 1
+group [22] leaves village 3
+group [23] leaves village 1
+group [21] enters village 5
+group [21] leaves village 5
+group [24] enters cable car to go up
+group [24] leaves the cable car
+group [22] enters village 4
+group [21] enters the cable car to go down
+group [23] enters village 2
+cable car ascends
+group [23] leaves village 2
+group [22] leaves village 4
+group [24] enters village 0
+group [24] leaves village 0
+group [22] enters village 5
+group [23] enters village 3
+group [22] leaves village 5
+group [23] leaves village 3
+group [24] enters village 1
+group [24] leaves village 1
+cable car descends
+group [23] enters village 4
+group [23] leaves village 4
+group [21] departs
+group [22] enters the cable car to go down
+group [22] leaves the cable car
+group [25] enters cable car to go up
+group [24] enters village 2
+group [24] leaves village 2
+group [25] departs
+group [23] enters village 5
+group [23] leaves village 5
+group [22] enters village 0
+group [22] leaves village 0
+group [24] enters village 3
+group [24] leaves village 3
+group [26] enters cable car to go up
+group [26] leaves the cable car
+group [22] enters village 1
+group [23] enters the cable car to go down
+group [22] leaves village 1
+group [23] departs
+group [24] enters village 4
+group [24] leaves village 4
+group [26] enters village 0
+group [22] enters village 2
+group [26] leaves village 0
+group [22] leaves village 2
+group [24] enters village 5
+group [24] leaves village 5
+group [22] enters village 3
+group [26] enters village 1
+group [22] leaves village 3
+group [26] leaves village 1
+group [27] enters cable car to go up
+group [27] leaves the cable car
+group [24] enters the cable car to go down
+cable car ascends
+group [22] enters village 4
+group [26] enters village 2
+group [22] leaves village 4
+group [26] leaves village 2
+group [27] enters village 0
+group [27] leaves village 0
+group [22] enters village 5
+group [26] enters village 3
+group [22] leaves village 5
+group [26] leaves village 3
+group [27] enters village 1
+group [27] leaves village 1
+cable car descends
+group [26] enters village 4
+group [26] leaves village 4
+group [27] enters village 2
+group [27] leaves village 2
+group [24] departs
+group [22] enters the cable car to go down
+group [22] leaves the cable car
+group [28] enters cable car to go up
+group [28] departs
+group [26] enters village 5
+group [27] enters village 3
+group [27] leaves village 3
+group [26] leaves village 5
+group [22] enters village 0
+group [22] leaves village 0
+group [27] enters village 4
+group [27] leaves village 4
+group [26] enters the cable car to go down
+group [22] enters village 1
+group [26] departs
+group [22] leaves village 1
+group [27] enters village 5
+group [29] enters cable car to go up
+group [29] leaves the cable car
+group [22] enters village 2
+group [27] leaves village 5
+group [22] leaves village 2
+group [29] enters village 0
+group [29] leaves village 0
+group [27] enters the cable car to go down
+cable car ascends
+group [22] enters village 3
+group [22] leaves village 3
+group [29] enters village 1
+group [29] leaves village 1
+group [22] enters village 4
+group [22] leaves village 4
+group [29] enters village 2
+group [29] leaves village 2
+group [22] enters village 5
+group [22] leaves village 5
+group [29] enters village 3
+group [29] leaves village 3
+group [29] enters village 4
+group [29] leaves village 4
+group [29] enters village 5
+cable car descends
+group [27] departs
+group [22] enters the cable car to go down
+group [22] leaves the cable car
+group [30] enters cable car to go up
+group [30] departs
+group [22] enters village 0
+group [29] leaves village 5
+group [22] leaves village 0
+group [29] enters the cable car to go down
+cable car ascends
+group [22] enters village 1
+group [22] leaves village 1
+group [22] enters village 2
+group [22] leaves village 2
+group [22] enters village 3
+group [22] leaves village 3
+group [22] enters village 4
+group [22] leaves village 4
+cable car descends
+group [22] enters village 5
+group [22] leaves village 5
+group [29] departs
+group [31] enters cable car to go up
+group [31] leaves the cable car
+group [22] enters the cable car to go down
+group [22] departs
+group [31] enters village 0
+group [31] leaves village 0
+group [31] enters village 1
+group [31] leaves village 1
+group [32] enters cable car to go up
+group [32] leaves the cable car
+group [31] enters village 2
+group [31] leaves village 2
+group [32] enters village 0
+group [32] leaves village 0
+group [31] enters village 3
+group [31] leaves village 3
+group [32] enters village 1
+group [32] leaves village 1
+group [31] enters village 4
+group [31] leaves village 4
+group [33] enters cable car to go up
+cable car ascends
+group [32] enters village 2
+group [32] leaves village 2
+group [31] enters village 5
+group [31] leaves village 5
+group [32] enters village 3
+group [32] leaves village 3
+group [32] enters village 4
+group [32] leaves village 4
+group [32] enters village 5
+cable car descends
+group [33] leaves the cable car
+group [34] enters cable car to go up
+group [33] enters village 0
+group [33] leaves village 0
+group [33] enters village 1
+group [34] leaves the cable car
+group [33] leaves village 1
+group [31] enters the cable car to go down
+group [31] departs
+group [34] enters village 0
+group [32] leaves village 5
+group [33] enters village 2
+group [34] leaves village 0
+group [33] leaves village 2
+group [35] enters cable car to go up
+cable car ascends
+group [34] enters village 1
+group [33] enters village 3
+group [33] leaves village 3
+group [34] leaves village 1
+group [33] enters village 4
+group [34] enters village 2
+group [33] leaves village 4
+group [34] leaves village 2
+group [33] enters village 5
+group [34] enters village 3
+group [34] leaves village 3
+group [34] enters village 4
+group [34] leaves village 4
+cable car descends
+group [35] leaves the cable car
+group [32] enters the cable car to go down
+group [32] departs
+group [36] enters cable car to go up
+group [33] leaves village 5
+group [35] enters village 0
+group [34] enters village 5
+group [35] leaves village 0
+group [36] leaves the cable car
+group [35] enters village 1
+group [35] leaves village 1
+group [33] enters the cable car to go down
+group [33] departs
+group [35] enters village 2
+group [36] enters village 0
+group [34] leaves village 5
+group [36] leaves village 0
+group [35] leaves village 2
+group [37] enters cable car to go up
+cable car ascends
+group [36] enters village 1
+group [35] enters village 3
+group [36] leaves village 1
+group [35] leaves village 3
+group [35] enters village 4
+group [36] enters village 2
+group [35] leaves village 4
+group [36] leaves village 2
+cable car descends
+group [35] enters village 5
+group [36] enters village 3
+group [36] leaves village 3
+group [37] leaves the cable car
+group [34] enters the cable car to go down
+group [34] departs
+group [38] enters cable car to go up
+group [36] enters village 4
+group [36] leaves village 4
+group [37] enters village 0
+group [35] leaves village 5
+group [37] leaves village 0
+group [36] enters village 5
+group [38] leaves the cable car
+group [35] enters the cable car to go down
+group [37] enters village 1
+group [35] departs
+group [37] leaves village 1
+group [39] enters cable car to go up
+group [36] leaves village 5
+group [38] enters village 0
+group [37] enters village 2
+group [38] leaves village 0
+group [37] leaves village 2
+group [39] leaves the cable car
+group [38] enters village 1
+group [37] enters village 3
+group [38] leaves village 1
+group [36] enters the cable car to go down
+group [37] leaves village 3
+group [36] departs
+group [39] enters village 0
+group [39] leaves village 0
+group [38] enters village 2
+group [37] enters village 4
+group [38] leaves village 2
+group [37] leaves village 4
+group [40] enters cable car to go up
+cable car ascends
+group [39] enters village 1
+group [37] enters village 5
+group [38] enters village 3
+group [37] leaves village 5
+group [39] leaves village 1
+group [38] leaves village 3
+group [39] enters village 2
+group [38] enters village 4
+group [39] leaves village 2
+group [38] leaves village 4
+group [39] enters village 3
+group [38] enters village 5
+group [39] leaves village 3
+cable car descends
+group [39] enters village 4
+group [39] leaves village 4
+group [40] leaves the cable car
+group [37] enters the cable car to go down
+group [37] departs
+group [41] enters cable car to go up
+group [40] enters village 0
+group [38] leaves village 5
+group [40] leaves village 0
+group [39] enters village 5
+group [41] leaves the cable car
+group [38] enters the cable car to go down
+group [38] departs
+group [40] enters village 1
+group [40] leaves village 1
+group [42] enters cable car to go up
+group [41] enters village 0
+group [39] leaves village 5
+group [40] enters village 2
+group [41] leaves village 0
+group [40] leaves village 2
+group [42] leaves the cable car
+group [40] enters village 3
+group [39] enters the cable car to go down
+group [40] leaves village 3
+group [41] enters village 1
+group [39] departs
+group [41] leaves village 1
+group [43] enters cable car to go up
+group [42] enters village 0
+group [41] enters village 2
+group [40] enters village 4
+group [41] leaves village 2
+group [42] leaves village 0
+group [40] leaves village 4
+cable car ascends
+group [41] enters village 3
+group [42] enters village 1
+group [41] leaves village 3
+group [40] enters village 5
+group [42] leaves village 1
+group [40] leaves village 5
+cable car descends
+group [41] enters village 4
+group [42] enters village 2
+group [41] leaves village 4
+group [42] leaves village 2
+group [43] leaves the cable car
+group [40] enters the cable car to go down
+group [40] departs
+group [44] enters cable car to go up
+group [42] enters village 3
+group [41] enters village 5
+group [42] leaves village 3
+group [41] leaves village 5
+group [43] enters village 0
+group [43] leaves village 0
+cable car ascends
+group [42] enters village 4
+group [42] leaves village 4
+group [43] enters village 1
+group [43] leaves village 1
+group [42] enters village 5
+group [43] enters village 2
+group [43] leaves village 2
+cable car descends
+group [44] leaves the cable car
+group [41] enters the cable car to go down
+group [41] departs
+group [45] enters cable car to go up
+group [43] enters village 3
+group [43] leaves village 3
+group [42] leaves village 5
+group [44] enters village 0
+group [44] leaves village 0
+group [43] enters village 4
+group [43] leaves village 4
+cable car ascends
+group [44] enters village 1
+group [44] leaves village 1
+group [43] enters village 5
+group [44] enters village 2
+group [44] leaves village 2
+group [44] enters village 3
+group [44] leaves village 3
+group [44] enters village 4
+group [44] leaves village 4
+cable car descends
+group [45] leaves the cable car
+group [42] enters the cable car to go down
+group [42] departs
+group [46] enters cable car to go up
+group [45] enters village 0
+group [43] leaves village 5
+group [45] leaves village 0
+group [44] enters village 5
+cable car ascends
+group [45] enters village 1
+group [45] leaves village 1
+group [45] enters village 2
+group [45] leaves village 2
+group [45] enters village 3
+group [45] leaves village 3
+group [45] enters village 4
+group [45] leaves village 4
+cable car descends
+group [46] leaves the cable car
+group [43] enters the cable car to go down
+group [43] departs
+group [47] enters cable car to go up
+group [46] enters village 0
+group [44] leaves village 5
+group [46] leaves village 0
+group [45] enters village 5
+group [46] enters village 1
+group [47] leaves the cable car
+group [46] leaves village 1
+group [44] enters the cable car to go down
+group [44] departs
+group [48] enters cable car to go up
+group [47] enters village 0
+group [45] leaves village 5
+group [46] enters village 2
+group [47] leaves village 0
+group [46] leaves village 2
+group [48] leaves the cable car
+group [46] enters village 3
+group [47] enters village 1
+group [46] leaves village 3
+group [45] enters the cable car to go down
+group [45] departs
+group [47] leaves village 1
+group [48] enters village 0
+group [47] enters village 2
+group [46] enters village 4
+group [47] leaves village 2
+group [48] leaves village 0
+group [46] leaves village 4
+group [49] enters cable car to go up
+cable car ascends
+group [48] enters village 1
+group [46] enters village 5
+group [47] enters village 3
+group [46] leaves village 5
+group [48] leaves village 1
+group [47] leaves village 3
+group [48] enters village 2
+group [47] enters village 4
+group [48] leaves village 2
+group [47] leaves village 4
+group [48] enters village 3
+group [47] enters village 5
+group [48] leaves village 3
+group [48] enters village 4
+group [48] leaves village 4
+cable car descends
+group [49] leaves the cable car
+group [46] enters the cable car to go down
+group [46] departs
+group [50] enters cable car to go up
+group [49] enters village 0
+group [47] leaves village 5
+group [49] leaves village 0
+group [48] enters village 5
+group [49] enters village 1
+group [50] leaves the cable car
+group [49] leaves village 1
+group [47] enters the cable car to go down
+group [47] departs
+group [51] enters cable car to go up
+group [49] enters village 2
+group [48] leaves village 5
+group [50] enters village 0
+group [49] leaves village 2
+group [50] leaves village 0
+group [51] leaves the cable car
+group [49] enters village 3
+group [50] enters village 1
+group [49] leaves village 3
+group [50] leaves village 1
+group [48] enters the cable car to go down
+group [48] departs
+group [52] enters cable car to go up
+cable car ascends
+group [51] enters village 0
+group [50] enters village 2
+group [49] enters village 4
+group [50] leaves village 2
+group [51] leaves village 0
+group [49] leaves village 4
+group [49] enters village 5
+group [51] enters village 1
+group [50] enters village 3
+group [51] leaves village 1
+group [49] leaves village 5
+group [50] leaves village 3
+group [50] enters village 4
+group [51] enters village 2
+group [50] leaves village 4
+group [51] leaves village 2
+group [50] enters village 5
+group [51] enters village 3
+group [51] leaves village 3
+cable car descends
+group [51] enters village 4
+group [51] leaves village 4
+group [52] leaves the cable car
+group [53] enters cable car to go up
+group [52] enters village 0
+group [52] leaves village 0
+group [52] enters village 1
+group [53] leaves the cable car
+group [52] leaves village 1
+group [49] enters the cable car to go down
+group [49] departs
+group [54] enters cable car to go up
+group [53] enters village 0
+group [50] leaves village 5
+group [52] enters village 2
+group [51] enters village 5
+group [53] leaves village 0
+group [52] leaves village 2
+group [54] leaves the cable car
+group [52] enters village 3
+group [53] enters village 1
+group [52] leaves village 3
+group [50] enters the cable car to go down
+group [53] leaves village 1
+group [50] departs
+group [55] enters cable car to go up
+group [54] enters village 0
+group [53] enters village 2
+group [51] leaves village 5
+group [52] enters village 4
+group [53] leaves village 2
+group [54] leaves village 0
+group [52] leaves village 4
+cable car ascends
+group [53] enters village 3
+group [54] enters village 1
+group [53] leaves village 3
+group [52] enters village 5
+group [54] leaves village 1
+group [53] enters village 4
+group [54] enters village 2
+group [53] leaves village 4
+group [54] leaves village 2
+group [54] enters village 3
+group [54] leaves village 3
+group [54] enters village 4
+cable car descends
+group [55] leaves the cable car
+group [51] enters the cable car to go down
+group [51] departs
+group [56] enters cable car to go up
+group [52] leaves village 5
+group [55] enters village 0
+group [53] enters village 5
+group [55] leaves village 0
+group [55] enters village 1
+group [54] leaves village 4
+group [56] leaves the cable car
+group [55] leaves village 1
+group [52] enters the cable car to go down
+group [52] departs
+group [57] enters cable car to go up
+cable car ascends
+group [56] enters village 0
+group [53] leaves village 5
+group [55] enters village 2
+group [54] enters village 5
+group [55] leaves village 2
+group [56] leaves village 0
+group [55] enters village 3
+group [56] enters village 1
+group [55] leaves village 3
+group [56] leaves village 1
+group [56] enters village 2
+group [55] enters village 4
+group [56] leaves village 2
+group [55] leaves village 4
+group [56] enters village 3
+group [56] leaves village 3
+group [56] enters village 4
+cable car descends
+group [57] leaves the cable car
+group [53] enters the cable car to go down
+group [53] departs
+group [58] enters cable car to go up
+group [57] enters village 0
+group [54] leaves village 5
+group [57] leaves village 0
+group [55] enters village 5
+group [58] leaves the cable car
+group [57] enters village 1
+group [56] leaves village 4
+group [57] leaves village 1
+group [54] enters the cable car to go down
+group [54] departs
+group [59] enters cable car to go up
+group [58] enters village 0
+group [57] enters village 2
+group [58] leaves village 0
+group [55] leaves village 5
+group [57] leaves village 2
+group [56] enters village 5
+group [57] enters village 3
+group [58] enters village 1
+group [59] leaves the cable car
+group [58] leaves village 1
+group [57] leaves village 3
+group [55] enters the cable car to go down
+group [55] departs
+group [60] enters cable car to go up
+cable car ascends
+group [59] enters village 0
+group [56] leaves village 5
+group [57] enters village 4
+group [58] enters village 2
+group [57] leaves village 4
+group [59] leaves village 0
+group [58] leaves village 2
+cable car descends
+group [60] leaves the cable car
+group [56] enters the cable car to go down
+group [58] enters village 3
+group [57] enters village 5
+group [59] enters village 1
+group [58] leaves village 3
+group [56] departs
+group [59] leaves village 1
+group [60] enters village 0
+group [57] leaves village 5
+group [59] enters village 2
+group [58] enters village 4
+group [59] leaves village 2
+group [58] leaves village 4
+group [60] leaves village 0
+group [61] enters cable car to go up
+group [61] leaves the cable car
+group [57] enters the cable car to go down
+group [57] departs
+group [58] enters village 5
+group [59] enters village 3
+group [60] enters village 1
+group [59] leaves village 3
+group [60] leaves village 1
+group [61] enters village 0
+group [58] leaves village 5
+group [61] leaves village 0
+group [60] enters village 2
+group [59] enters village 4
+group [60] leaves village 2
+group [59] leaves village 4
+group [62] enters cable car to go up
+cable car ascends
+group [61] enters village 1
+group [59] enters village 5
+group [60] enters village 3
+group [61] leaves village 1
+group [60] leaves village 3
+group [60] enters village 4
+group [61] enters village 2
+group [60] leaves village 4
+group [61] leaves village 2
+cable car descends
+group [62] leaves the cable car
+group [58] enters the cable car to go down
+group [58] departs
+group [63] enters cable car to go up
+group [61] enters village 3
+group [61] leaves village 3
+group [62] enters village 0
+group [59] leaves village 5
+group [62] leaves village 0
+group [60] enters village 5
+group [61] enters village 4
+group [62] enters village 1
+group [63] leaves the cable car
+group [61] leaves village 4
+group [62] leaves village 1
+group [59] enters the cable car to go down
+group [59] departs
+group [64] enters cable car to go up
+group [63] enters village 0
+group [60] leaves village 5
+group [62] enters village 2
+group [61] enters village 5
+group [63] leaves village 0
+group [62] leaves village 2
+cable car ascends
+group [63] enters village 1
+group [62] enters village 3
+group [63] leaves village 1
+group [62] leaves village 3
+cable car descends
+group [63] enters village 2
+group [62] enters village 4
+group [63] leaves village 2
+group [62] leaves village 4
+group [64] leaves the cable car
+group [60] enters the cable car to go down
+group [60] departs
+group [65] enters cable car to go up
+group [63] enters village 3
+group [63] leaves village 3
+group [64] enters village 0
+group [64] leaves village 0
+group [61] leaves village 5
+group [62] enters village 5
+group [63] enters village 4
+group [64] enters village 1
+group [65] leaves the cable car
+group [64] leaves village 1
+group [63] leaves village 4
+group [61] enters the cable car to go down
+group [61] departs
+group [66] enters cable car to go up
+cable car ascends
+group [65] enters village 0
+group [64] enters village 2
+group [65] leaves village 0
+group [64] leaves village 2
+group [62] leaves village 5
+group [63] enters village 5
+group [65] enters village 1
+group [64] enters village 3
+group [65] leaves village 1
+group [64] leaves village 3
+group [65] enters village 2
+group [64] enters village 4
+group [65] leaves village 2
+group [64] leaves village 4
+group [65] enters village 3
+group [65] leaves village 3
+group [65] enters village 4
+cable car descends
+group [66] leaves the cable car
+group [62] enters the cable car to go down
+group [62] departs
+group [67] enters cable car to go up
+cable car ascends
+group [66] enters village 0
+group [63] leaves village 5
+group [66] leaves village 0
+group [64] enters village 5
+group [66] enters village 1
+group [65] leaves village 4
+group [66] leaves village 1
+group [66] enters village 2
+group [66] leaves village 2
+group [66] enters village 3
+group [66] leaves village 3
+group [66] enters village 4
+cable car descends
+group [67] leaves the cable car
+group [68] enters cable car to go up
+group [67] enters village 0
+group [67] leaves village 0
+group [67] enters village 1
+group [68] leaves the cable car
+group [67] leaves village 1
+group [63] enters the cable car to go down
+group [63] departs
+group [69] enters cable car to go up
+group [68] enters village 0
+group [64] leaves village 5
+group [68] leaves village 0
+group [67] enters village 2
+group [65] enters village 5
+group [67] leaves village 2
+cable car ascends
+group [68] enters village 1
+group [67] enters village 3
+group [66] leaves village 4
+group [67] leaves village 3
+group [68] leaves village 1
+group [67] enters village 4
+group [68] enters village 2
+group [68] leaves village 2
+cable car descends
+group [68] enters village 3
+group [68] leaves village 3
+group [69] leaves the cable car
+group [64] enters the cable car to go down
+group [64] departs
+group [70] enters cable car to go up
+group [69] enters village 0
+group [65] leaves village 5
+group [69] leaves village 0
+group [66] enters village 5
+group [70] leaves the cable car
+group [65] enters the cable car to go down
+group [69] enters village 1
+group [67] leaves village 4
+group [65] departs
+group [69] leaves village 1
+group [68] enters village 4
+group [71] enters cable car to go up
+group [70] enters village 0
+group [66] leaves village 5
+group [69] enters village 2
+group [67] enters village 5
+group [70] leaves village 0
+group [69] leaves village 2
+group [68] leaves village 4
+group [69] enters village 3
+group [70] enters village 1
+group [71] leaves the cable car
+group [70] leaves village 1
+group [69] leaves village 3
+group [66] enters the cable car to go down
+group [66] departs
+group [71] enters village 0
+group [67] leaves village 5
+group [69] enters village 4
+group [70] enters village 2
+group [68] enters village 5
+group [70] leaves village 2
+group [71] leaves village 0
+group [72] enters cable car to go up
+cable car ascends
+group [69] leaves village 4
+group [70] enters village 3
+group [71] enters village 1
+group [70] leaves village 3
+group [71] leaves village 1
+cable car descends
+group [70] enters village 4
+group [71] enters village 2
+group [71] leaves village 2
+group [72] leaves the cable car
+group [67] enters the cable car to go down
+group [67] departs
+group [71] enters village 3
+group [71] leaves village 3
+group [68] leaves village 5
+group [72] enters village 0
+group [69] enters village 5
+group [72] leaves village 0
+group [73] enters cable car to go up
+group [73] leaves the cable car
+group [70] leaves village 4
+group [72] enters village 1
+group [71] enters village 4
+group [68] enters the cable car to go down
+group [72] leaves village 1
+group [68] departs
+group [73] enters village 0
+group [69] leaves village 5
+group [73] leaves village 0
+group [72] enters village 2
+group [70] enters village 5
+group [72] leaves village 2
+group [74] enters cable car to go up
+cable car ascends
+group [73] enters village 1
+group [73] leaves village 1
+group [71] leaves village 4
+group [72] enters village 3
+group [72] leaves village 3
+group [73] enters village 2
+group [73] leaves village 2
+group [72] enters village 4
+cable car descends
+group [73] enters village 3
+group [73] leaves village 3
+group [74] leaves the cable car
+group [69] enters the cable car to go down
+group [69] departs
+group [75] enters cable car to go up
+cable car ascends
+group [74] enters village 0
+group [70] leaves village 5
+group [74] leaves village 0
+group [71] enters village 5
+group [72] leaves village 4
+group [74] enters village 1
+group [73] enters village 4
+group [74] leaves village 1
+group [74] enters village 2
+group [74] leaves village 2
+group [74] enters village 3
+group [74] leaves village 3
+cable car descends
+group [75] leaves the cable car
+group [70] enters the cable car to go down
+group [70] departs
+group [76] enters cable car to go up
+group [75] enters village 0
+group [71] leaves village 5
+group [75] leaves village 0
+group [72] enters village 5
+group [75] enters village 1
+group [73] leaves village 4
+group [76] leaves the cable car
+group [74] enters village 4
+group [71] enters the cable car to go down
+group [75] leaves village 1
+group [71] departs
+group [76] enters village 0
+group [72] leaves village 5
+group [75] enters village 2
+group [73] enters village 5
+group [76] leaves village 0
+group [75] leaves village 2
+group [77] enters cable car to go up
+cable car ascends
+group [74] leaves village 4
+group [76] enters village 1
+group [76] leaves village 1
+group [75] enters village 3
+group [75] leaves village 3
+group [76] enters village 2
+group [76] leaves village 2
+group [75] enters village 4
+cable car descends
+group [76] enters village 3
+group [76] leaves village 3
+group [77] leaves the cable car
+group [72] enters the cable car to go down
+group [72] departs
+group [78] enters cable car to go up
+cable car ascends
+group [77] enters village 0
+group [73] leaves village 5
+group [77] leaves village 0
+group [74] enters village 5
+group [77] enters village 1
+group [75] leaves village 4
+group [77] leaves village 1
+group [76] enters village 4
+group [77] enters village 2
+group [77] leaves village 2
+group [77] enters village 3
+group [77] leaves village 3
+cable car descends
+group [78] leaves the cable car
+group [73] enters the cable car to go down
+group [73] departs
+group [79] enters cable car to go up
+group [78] enters village 0
+group [74] leaves village 5
+group [78] leaves village 0
+group [75] enters village 5
+group [79] leaves the cable car
+group [74] enters the cable car to go down
+group [76] leaves village 4
+group [78] enters village 1
+group [77] enters village 4
+group [74] departs
+group [78] leaves village 1
+group [80] enters cable car to go up
+group [79] enters village 0
+group [75] leaves village 5
+group [79] leaves village 0
+group [76] enters village 5
+group [78] enters village 2
+group [78] leaves village 2
+group [80] leaves the cable car
+group [77] leaves village 4
+group [78] enters village 3
+group [75] enters the cable car to go down
+group [79] enters village 1
+group [75] departs
+group [78] leaves village 3
+group [79] leaves village 1
+group [81] enters cable car to go up
+cable car ascends
+group [80] enters village 0
+group [79] enters village 2
+group [80] leaves village 0
+group [78] enters village 4
+group [79] leaves village 2
+group [76] leaves village 5
+group [77] enters village 5
+group [80] enters village 1
+group [78] leaves village 4
+group [79] enters village 3
+group [80] leaves village 1
+group [79] leaves village 3
+group [80] enters village 2
+group [79] enters village 4
+group [80] leaves village 2
+group [80] enters village 3
+group [80] leaves village 3
+cable car descends
+group [81] leaves the cable car
+group [76] enters the cable car to go down
+group [76] departs
+group [82] enters cable car to go up
+group [81] enters village 0
+group [77] leaves village 5
+group [81] leaves village 0
+group [78] enters village 5
+group [82] leaves the cable car
+group [77] enters the cable car to go down
+group [79] leaves village 4
+group [81] enters village 1
+group [80] enters village 4
+group [77] departs
+group [81] leaves village 1
+group [83] enters cable car to go up
+group [82] enters village 0
+group [82] leaves village 0
+group [81] enters village 2
+group [78] leaves village 5
+group [81] leaves village 2
+group [79] enters village 5
+group [83] leaves the cable car
+group [82] enters village 1
+group [80] leaves village 4
+group [82] leaves village 1
+group [81] enters village 3
+group [78] enters the cable car to go down
+group [81] leaves village 3
+group [78] departs
+group [83] enters village 0
+group [83] leaves village 0
+group [79] leaves village 5
+group [82] enters village 2
+group [80] enters village 5
+group [81] enters village 4
+group [82] leaves village 2
+group [84] enters cable car to go up
+cable car ascends
+group [83] enters village 1
+group [82] enters village 3
+group [81] leaves village 4
+group [82] leaves village 3
+group [83] leaves village 1
+cable car descends
+group [82] enters village 4
+group [83] enters village 2
+group [83] leaves village 2
+group [84] leaves the cable car
+group [79] enters the cable car to go down
+group [79] departs
+group [85] enters cable car to go up
+group [83] enters village 3
+group [83] leaves village 3
+group [84] enters village 0
+group [80] leaves village 5
+group [84] leaves village 0
+group [81] enters village 5
+cable car ascends
+group [84] enters village 1
+group [82] leaves village 4
+group [84] leaves village 1
+group [83] enters village 4
+group [84] enters village 2
+group [84] leaves village 2
+group [84] enters village 3
+group [84] leaves village 3
+cable car descends
+group [85] leaves the cable car
+group [80] enters the cable car to go down
+group [80] departs
+group [86] enters cable car to go up
+group [85] enters village 0
+group [81] leaves village 5
+group [85] leaves village 0
+group [82] enters village 5
+cable car ascends
+group [85] enters village 1
+group [83] leaves village 4
+group [85] leaves village 1
+group [84] enters village 4
+group [85] enters village 2
+group [85] leaves village 2
+group [85] enters village 3
+group [85] leaves village 3
+cable car descends
+group [86] leaves the cable car
+group [81] enters the cable car to go down
+group [81] departs
+group [87] enters cable car to go up
+group [86] enters village 0
+group [82] leaves village 5
+group [86] leaves village 0
+group [83] enters village 5
+cable car ascends
+group [86] enters village 1
+group [84] leaves village 4
+group [86] leaves village 1
+group [85] enters village 4
+cable car descends
+group [86] enters village 2
+group [86] leaves village 2
+group [87] leaves the cable car
+group [82] enters the cable car to go down
+group [82] departs
+group [88] enters cable car to go up
+group [86] enters village 3
+group [86] leaves village 3
+group [87] enters village 0
+group [83] leaves village 5
+group [87] leaves village 0
+group [84] enters village 5

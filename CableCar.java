@@ -2,6 +2,7 @@ class CableCar implements TrainStop {
 
     private Group group;            // group occupying the car
     private boolean inValley;       // flag indicating if in valley
+
     private boolean isDeparting;    // flag indicating if departing
     private boolean isReturning;    // whether a group is returning
 

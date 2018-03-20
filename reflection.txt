@@ -1,0 +1,86 @@
+REFLECTION
+
+(1) EVALUATION OF SUCCESS
+
+Implementation is successful
+* Simulates Concurrencia as described in the specification
+* Output generated reflects that behaviour
+* Reasonably simple implementation: TrainStops as Monitors, Trains as
+threads
+* Hence reasonably easy to understand
+* Potentially extensible (e.g. new TrainStop types can easily be
+added e.g. Mountain)
+
+(2) CRITICAL DESIGN DECISIONS
+
+Monitor/Thread designation
+* Treat TrainStops as monitors, trains as Threads, and Groups as "relay"
+batons passed between theseA
+* Treat CableCar operator as a Thread
+
+Responsibility assigned to TrainStops
+* Train stops given "leave" and "enter" functionality because this was
+the simplest way to imnplement the monitors
+* Unfaithful representation in reality (i.e. increases the representation
+gap between the simulation and their real-world counterparts) since - of
+course - the actual objects doing "the leaving" and "entering" are
+groups themselves. This leaves groups themselves farely barebones, they are
+treated more as passive cargo than as actors.
+
+Responsibility assigned to Trains
+* Again, for simplification, some of the real complexities of trains
+as they operate in reality are abstracted away in the simulation. There
+is no semblance of a "train schedule" in the simulation; rather these
+trains just wait till groups are available at source villages, then
+drop them at their destinations. They don't wait till "next scheduled
+departure time".
+
+Implementation of CableCar
+* Initial instinct was to treat arrive and depart as the same as functions
+for enter and leave, but this ended up causing unnecessary complexity
+when reconciling the different behaviours that these elicit, and the
+objects that they interface with (Consumer/Producer rather than Train)
+* Additional flags required to indicate (1) if groups in the valley were
+leaving to or returning from Concurrencia, and (2) if groups at the terminus had just arrived
+in Concurrencia or were leaving. Alternative is to put this in Group
+
+
+(3) PROBLEMS THAT AROSE
+
+Operator not moving groups back down
+
+Train picking up groups that had just been around Concurrencia
+
+Consumer eating groups that had just arrived in the valley and were
+intending to leave to Concurrencia
+
+Groups Looping around Villages Forever, Never catching Car
+* Add a flag to CableCar
+
+Cable Car
+* CableCar operator woulkd never send groups back down if it was always
+waiting for the car to be unoccupied before moving; consequently groups
+would just loop around villages forever.
+
+* Conumser consuming groups that have just arrived
+* A related problem, groups that simply kept looping around the village
+* 
+
+(4) INSIGHTS FROM EXPERIMENTATION
+
+* See problems
+
+* With the new implementation, changing the parameters does not seem
+to cause the behaviour to deviate from spec.
+
+* Because there is only one way in and out of the valley, groups are
+directional, and the capacity of all villages/trains is only 1, it's possible
+to saturate Concurrencia (fill all group positions) into deadlock. Say all
+trains are full, producer has just generated a new group for cable car,
+all villages are full, then nobody can move. Since this could technically
+happen in reality though, this behaviour is still technically accurately
+simulating the system. Most likely, the group that has just arrived in the
+valley would have to exit the cable car temporarily and wait for 
+
+* This doesn't happen in this simulation because the cable car cannot
+descend without taking someone out of the valley
