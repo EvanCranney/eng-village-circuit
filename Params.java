@@ -16,19 +16,19 @@ public class Params {
   public final static int MAIN_INTERVAL = 50;
 
   //the time it takes to operate the cable car
-  public final static int OPERATE_TIME = 1;//800;
+  public final static int OPERATE_TIME = 800;
 
   //the time it takes for a single train journey
-  public final static int JOURNEY_TIME = 1;//1200;
+  public final static int JOURNEY_TIME = 1200;
 
   //the maximum amount of time between group arrivals
-  public final static int MAX_ARRIVE_INTERVAL = 1;//2400;
+  public final static int MAX_ARRIVE_INTERVAL = 2400;
 
   //the maximum amount of time between group departures
-  public final static int MAX_DEPART_INTERVAL = 1;//800;
+  public final static int MAX_DEPART_INTERVAL = 800;
 
   //the maximum amount of time between operating the cable car
-  public final static int MAX_OPERATE_INTERVAL = 1;//6400;
+  public final static int MAX_OPERATE_INTERVAL = 6400;
 
   //added by @ecranney
   //the maximum number of groups that can be in Concurrencia simultaneously
