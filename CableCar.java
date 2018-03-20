@@ -43,7 +43,7 @@ class CableCar implements TrainStop {
             }
         }
 
-        // travel between valleu and terminus (or vice versa)
+        // travel between valley and terminus (or vice versa)
         try {
             if (inValley) {
                 System.out.println("cable car ascends");
@@ -79,6 +79,7 @@ class CableCar implements TrainStop {
 
         // group is returning from villages
         isReturning = true;
+ 
         notifyAll();
     }
 
@@ -98,6 +99,10 @@ class CableCar implements TrainStop {
         System.out.println(group.toString() + " leaves the cable car");
         Group tmp = this.group;
         this.group = null;
+
+        // any group that enters now will be returning from villages        
+        isReturning = true;
+
         notifyAll();
         return tmp;
     }
@@ -120,6 +125,7 @@ class CableCar implements TrainStop {
 
         // group is departing to villages (not returning from them)
         isReturning = false;
+
         notifyAll();
     }
 
@@ -134,6 +140,10 @@ class CableCar implements TrainStop {
         // then consume the group
         System.out.println(group.toString() + " departs");
         this.group = null;
+
+        // any group to enter now will be departing to villages
+        isReturning = false;
+
         notifyAll();
     }
 }
