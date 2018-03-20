@@ -31,12 +31,16 @@ class CableCar implements TrainStop {
     public synchronized void travel() {
         // if at Valley:
         //   make sure that any returning group has been consumed
-        // else if at Terminus:
+        // if at Terminus:
         //   make sure that any departing group has been picked up
         while ((inValley && isOccupied() && isReturning) ||
                (!inValley && isOccupied() && !isReturning)) {
-            try { wait(); }
-            catch (InterruptedException e) { }
+            try {
+                wait();
+            }
+            catch (InterruptedException e) {
+                // empty
+            }
         }
 
         // travel between valleu and terminus (or vice versa)
@@ -47,6 +51,7 @@ class CableCar implements TrainStop {
                 System.out.println("cable car descends");
             }
             inValley = !inValley;
+            // simulate travel time of the cable car
             wait(Params.OPERATE_TIME);
         }
         catch (InterruptedException e) {
@@ -71,6 +76,8 @@ class CableCar implements TrainStop {
         System.out.println(group.toString() +
             " enters the cable car to go down");
         this.group = group;
+
+        // group is returning from villages
         isReturning = true;
         notifyAll();
     }
@@ -110,6 +117,8 @@ class CableCar implements TrainStop {
         // then generate new group
         System.out.println(group.toString() + " enters cable car to go up");
         this.group = group;
+
+        // group is departing to villages (not returning from them)
         isReturning = false;
         notifyAll();
     }
