@@ -5,8 +5,8 @@ REFLECTION
 The implementation is successful in that it correctly (i.e. as per the
 specifiation) simulates tour group visits to Concurrencia; this is captured
 by the simulation output. It remains robust even when the simulation
-parameters are widely varied and when left to run indefinitely. It is also
-successful from a design perspective; the implementation is easy to
+parameters are varied, and when left to run indefinitely. It is also
+successful from a design perspective: the implementation is easy to
 understand due to its relative simplicity, but retains potential for
 extensibility (see (2) Design Decisions).
 
@@ -14,14 +14,14 @@ extensibility (see (2) Design Decisions).
 
   (a) Train Stop Interface - since several classes function as train stops
       (e.g. CableCar, Village), it was sensible to define a TrainStop
-      interface. This provides both greater extendibility of the simulation
-      by leveraging polymorphism (e.g. if another class, like Mountain,
-      which needs to function as a stop, is added to the simulation). This
-      is preferable to an abstract class for two reasons: firstly the 
-      objects implementing TrainStop are conceptually unrelated (CableCar
-      and Village are not subtypes of a common parent); secondly,
+      interface. This provides greater extendibility of the simulation
+      by leveraging polymorphism; new classes (e.g. Mountain) which also
+      function as stops can be accomodated simply by implementing the
+      interface. This was preferable to an abstract class for two reasons: 
+      firstly the objects implementing TrainStop are conceptually unrelated 
+      (CableCar and Village are not subtypes of a common parent); secondly,
       implementations of the leave() and enter() methods vary
-      substantially between implementations of TrainStop.
+      substantially between implementations.
 
   (b) Monitor/Thread Designation - TrainStop classes have been implemented
       as monitors, and trains as threads. This was done for the sake of
@@ -38,19 +38,19 @@ extensibility (see (2) Design Decisions).
       able to distinguish between groups in the car that have just arrived
       (and are still to visit the villages) and those that are returning
       (after having visited the villages). Failing to do this results in
-      the problems identified in (3)(a). This was done by adding a flag
-      (isReturning) to CableCar instances; this was favourable over the
+      the problems identified in (3)(a). This was achieved by adding a flag
+      (isReturning) to CableCar instances; this was favourable to the
       alternative (adding a "state" to Group objects) because of its 
       relative simplicity.
 
 (3) INSIGHTS FROM EXPERIMENTATION
 
   (a) Distinguishing Returning & Departing Groups - failure to add the
-      flag described in (2)(c) can result in erroneous group behaviour.
+      flag described in (2)(c) can result in erroneous group itineraries.
       Groups that arrive at the terminus after visiting the villages may
       then loop around and visit the villages again. Likewise, groups that
       arrive in the valley may be immediately consumed from the car (without
-      visiting any villages).
+      having visited any villages).
 
   (b) Potential Deadlock - if enough groups enter Concurrencia such that
       all villages and trains are occupied, and then a new group arrives
