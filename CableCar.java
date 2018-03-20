@@ -8,7 +8,11 @@
 
 class CableCar implements TrainStop {
 
+    // number of groups
     private Group group;            // group occupying the car
+
+    // number of groups currently in Concurrencia
+    private int num_groups;
 
     // flag indicating if car is currently in valley
     private boolean inValley;
@@ -20,11 +24,18 @@ class CableCar implements TrainStop {
     CableCar() {
         inValley = true;
         isReturning = false;
+        num_groups = 0;
     }
 
     // checks whether the cable car is already occupied
     public boolean isOccupied() {
         return group != null;
+    }
+
+    // checks whether the maximum number of groups is already present
+    //   in Concurrencia
+    public boolean atCapacity() {
+        return num_groups >= Params.MAX_GROUPS;
     }
 
     // travel between the valley and terminus - used by Operator
@@ -110,8 +121,8 @@ class CableCar implements TrainStop {
     // simulates a group arriving in the valley by filling the cable car -
     //   used by Producer
     public synchronized void arrive(Group group) {
-        // wait till not occupied AND in valley:
-        while (isOccupied() || !inValley) {
+        // wait till not occupied AND in valley AND not at max num groups 
+        while (isOccupied() || !inValley || atCapacity()) {
             try {
                 wait();
             }
@@ -125,6 +136,9 @@ class CableCar implements TrainStop {
 
         // group is departing to villages (not returning from them)
         isReturning = false;
+
+        // increment number of groups in Concurrencia
+        num_groups += 1;
 
         notifyAll();
     }
@@ -143,6 +157,9 @@ class CableCar implements TrainStop {
 
         // any group to enter now will be departing to villages
         isReturning = false;
+
+        // decrement number of groups currently in Concurrencia
+        num_groups -= 1;
 
         notifyAll();
     }
