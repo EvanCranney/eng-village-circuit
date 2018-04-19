@@ -1,0 +1,239 @@
+/*  @date April 2018
+ *  @author ecranney
+ *
+ *  PART 1: FSP model of the mountain village (Concurrencia) simulator. Major
+ *  sub-components are:
+ *     (A) Entry-Exit Subsystem - (a) the Producer/Consumer components which
+ *         generate/consume tour groups; (b) the CableCar and Operator which
+ *         take tour groups to the village circuit from the valley (and vice
+ *         versa).
+ *     (B) Circuit Subsystem - the villages, connected sequentially by trains,
+ *         which the tour groups visit one-by-one and in-order.
+ *
+ *  PART 2: Demonstration of (A) safety and (B) liveness properties of the
+ *  model.
+ *
+ */
+
+
+const Nvillages = 2                      // number of villages
+const Ntrains = Nvillages + 1            // number of trains
+const Ngroups = 2 * Nvillages            // number groups possible at once
+
+const False = 0                          // definition of boolean type
+const True = 1                           // (definition continued)
+range Bool = False..True                 // (definition continued)
+
+
+// PART 1 (A): Enty-Exit Subsystem
+// Counter - keeps track of number of groups in the system, prevents any more
+//   groups from being produced if at capacity
+COUNTER = COUNTER[0],
+COUNTER[i:0..Ngroups] =
+    ( when (i < Ngroups) arrive -> COUNTER[i+1]
+    | when (i > 0) depart -> COUNTER[i-1]
+    ).
+
+// Producer / Consumer (OPTIONAL) - produce tour groups in the valley and
+//   consume them once they have visited all villages in the circuit.
+//   Optional because actions are subsumed entirely by CABLE_CAR.
+PRODUCER = (produce -> PRODUCER).
+CONSUMER = (consume -> CONSUMER).
+
+// Operator (OPTIONAL) - moves the cable car between the valley and terminus.
+//   Optional because action-set is subsumed entirely by CABLE_CAR.
+OPERATOR = (ascend -> descend -> OPERATOR). 
+
+// Cable Car - model of the cable car, valley entrance, and terminus objects.
+//    Receives tour groups at the valley and takes them up to the terminus
+//    (ascends). Also takes tour groups from the terminus back to the valley.
+//    Can only carry one tour group at a time.
+CABLE_CAR = CABLE_CAR[False][True][False],
+CABLE_CAR[isOccupied:Bool][inValley:Bool][isReturning:Bool] =
+    ( when (!isOccupied && inValley && !isReturning)
+    // waiting in valley for new group to arrive
+        arrive -> CABLE_CAR[True][True][False]
+    | when (!isOccupied && inValley && isReturning)
+    // as above, waiting in valley for new group
+        arrive -> CABLE_CAR[True][True][False]
+    | when (!isOccupied && inValley && isReturning)
+    // ascend without a group
+        ascend -> CABLE_CAR[False][False][True]
+    | when (isOccupied && inValley && !isReturning)
+    // new group has just arrived, so ascend to terminus
+        ascend -> CABLE_CAR[True][False][False]
+    | when (isOccupied && !inValley && !isReturning)
+    // just ascended to terminus, wait for group to be picked up by train
+        leave -> CABLE_CAR[False][False][True]
+    | when (!isOccupied && !inValley && isReturning)
+    // at terminus unoccupied - option 1: wait for group come back
+        enter -> CABLE_CAR[True][False][True]
+    | when (!isOccupied && !inValley && isReturning)
+    // at terminus unoccupied - option 2: descend without a group
+        descend -> CABLE_CAR[False][True][True]
+    | when (isOccupied && !inValley && isReturning)
+    // at terminus occupied, descend with group
+        descend -> CABLE_CAR[True][True][True]
+    | when (isOccupied && inValley && isReturning)
+    // group just returned from villages, depart
+        depart -> CABLE_CAR[False][True][False]
+    )
+	// the following alphabet extension is necssary to prepare for the
+    //   composition with the village-circuit subsystem. This prevents any
+    //   train from either dropping off tour groups at it's start village,
+    //   and from pickup up tour groups from its destination village.
+	+ {train[i:0..Nvillages].dst.leave, train[i:0..Nvillages].start.enter}.
+
+// Composition of the Entry-Exit subsystem.
+|| ENTRY_EXIT = 
+	(  PRODUCER/{arrive/produce}
+	|| CONSUMER/{depart/consume}
+    || CABLE_CAR
+	|| OPERATOR
+	|| COUNTER
+	).
+
+
+// PART 1 (B): Village Circuit Subsystem
+// Village - visited by tour groups. Can only be visited by a single tour
+//   group at once
+VILLAGE = VILLAGE[False],
+VILLAGE[isOccupied:Bool] = 
+    ( when (isOccupied)
+        leave -> VILLAGE[False]
+    | when (!isOccupied)
+        enter -> VILLAGE[True]
+    ).
+
+// Train - each train carries tour groups from one village (start) to a
+//   destination village (dst). Can only carry a single tour group at once.
+TRAIN = TRAIN[False],
+TRAIN[isOccupied:Bool] =
+    ( when (isOccupied)
+        // carrying tour group: take it to destination then return
+        go_to_dst -> dst.enter -> go_to_start -> TRAIN[False]
+    | when (!isOccupied)
+        // not carrying tour group: pick up from start 
+        start.leave -> TRAIN[True]
+    ).
+
+// Composition of village circuit subsystem. Every village i has an incoming
+//   train i-1 and an outgoing train i. Note that the incoming train for
+//   village i is the outgoing train for village i-1.
+|| CIRCUIT =
+    (forall [i:1..Nvillages]
+        (  train[i-1]:TRAIN 
+        || train[i]:TRAIN
+        || {train[i-1].dst, train[i].start}::VILLAGE
+        )
+    ).//\{train[0].dst.leave, train[Nvillages].start.enter}.
+
+
+// PART 1 (A)+(B): Composition of the entire system 
+|| CONCURRENCIA = 
+    (  ENTRY_EXIT
+            // the following renaming effectively makes the cable car the
+            //   start destination for the first train, and the end
+            //   destination for the last train
+            /{train[Nvillages].dst.enter/enter, train[0].start.leave/leave}
+    || CIRCUIT
+    ).
+
+
+// PART 2 (A): Safety Properties
+
+// S1. Groups cannot enter an occupied village.
+property SAFE_VILLAGE = (enter -> leave -> SAFE_VILLAGE).
+|| S1 = (SAFE_VILLAGE || VILLAGE).
+
+// S2. Groups cannot enter an occupied train.
+property SAFE_TRAIN = (start.leave -> dst.enter -> SAFE_TRAIN).
+|| S2 = (SAFE_TRAIN || TRAIN).
+
+// S3. Groups can "arrive" in cable car only if unoccupied and while in valley.
+// S4. Groups can "depart" only if in the cable car while in the valley.
+// S5. Groups can leave the cable car (= board a train) to go to the villages
+//       only if at the terminus and if they have not already visited them.
+// S6. Groups can enter the cable car (= dropped off by a train) if it is at
+//       the terminus and they are coming back from visiting the villages.
+// S7. Groups can depart the valley only after visiting all the villages.
+// S8. Groups cannot go around the village circuit more than once. After
+//       visiting all the villages, they must then depart.
+property SAFE_CAR = SAFE_CAR[False][True][False],
+SAFE_CAR[isOccupied:Bool][inValley:Bool][isReturning:Bool] =
+
+    // S3 - can only arrive if in valley and car is unoccupied.
+    ( when (!isOccupied && inValley && !isReturning)
+        arrive -> ascend -> SAFE_CAR[True][False][False]
+    | when (!isOccupied && inValley && isReturning)
+        arrive -> ascend -> SAFE_CAR[True][False][False]
+
+    | when (!isOccupied && inValley && isReturning)
+        ascend -> SAFE_CAR[False][False][True]
+    | when (isOccupied && inValley && !isReturning)
+        ascend -> SAFE_CAR[True][False][False]
+
+	// S5 - must leave car if haven't visited all villages (=not returnining).
+    | when (isOccupied && !inValley && !isReturning)
+        leave -> SAFE_CAR[False][False][True]
+
+    // S6 - can only enter if at terminus and unoccupied.
+    // S7 - can only depart after visiting all villages (=returning).
+    // S8 - cannot visit villages (=leave) if already visited (=returning).
+    | when (!isOccupied && !inValley && isReturning)
+        enter -> descend -> depart -> SAFE_CAR[False][True][False]
+
+    | when (!isOccupied && !inValley && isReturning)
+        descend -> SAFE_CAR[False][True][True]
+
+    // S4 - can only depart if in the valley.
+    | when (isOccupied && inValley && isReturning)
+        depart -> SAFE_CAR[False][True][False]
+    ).
+|| S3_8 = (SAFE_CAR || CABLE_CAR).
+
+
+// Composition the safety properties into the entry-exit subsystem.
+|| SAFE_ENTRY_EXIT = 
+	(  PRODUCER/{arrive/produce}
+	|| CONSUMER/{depart/consume}
+    || S3_8
+	|| OPERATOR
+	|| COUNTER
+	).
+
+// Composition of the safety properties into the village-circuit subsystem.
+|| SAFE_CIRCUIT =
+    (forall [i:1..Nvillages]
+        (  train[i-1]:S2 
+        || train[i]:S2
+        || {train[i-1].dst, train[i].start}::S1
+        )
+    ).
+
+// Composition of the safety properties into the complete system.
+|| SAFE_CONCURRENCIA =
+    (  SAFE_ENTRY_EXIT
+    || SAFE_CIRCUIT
+            /{train[Nvillages].dst.enter/enter, train[0].start.leave/leave}
+    ).
+
+
+// PART 2 (B): Liveness Properties
+
+// L1. A new group should always eventually arrive in the valley.
+progress ARRIVE = {arrive}
+
+// L2. Any group in the valley must eventually depart.
+//   Note: this also tests that a group which enters the cable car (i.e. after
+//   visiting the villages) must eventually depart.
+progress DEPART = {depart}
+
+// L3. Any group which enters a village must eventually leave (=board next
+//     train).
+//   Note: this is also tests that a group which arrives in the cable car must
+//   eventually leave (i.e. to visit the villages)
+progress LEAVE_VILLAGE = {train[0..Nvillages].start.leave}
+
+// L4. Any group which enters a train must eventually leave.
+progress LEAVE_TRAIN = {train[0..Nvillages].dst.enter}
